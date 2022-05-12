@@ -23,7 +23,7 @@
   },
   "scripts": {
     "start": "start-storybook -p 6006",
-    "build": "rm -rf dist && npm run build:esm && npm run build:cjs",
+    "build": "(rm -rf dist || rmdir /s /q dist) && npm run build:esm && npm run build:cjs",
     "build:esm": "tsc --noEmit false",
     "build:cjs": "tsc --noEmit false --module commonjs --outDir ./dist/cjs",
     "test": "react-scripts test --watchAll=false",
