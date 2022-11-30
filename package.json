@@ -29,7 +29,8 @@
     "test": "react-scripts test --watchAll=false",
     "build-storybook": "build-storybook",
     "deploy": "npm run build-storybook && gh-pages -d storybook-static",
-    "release": "npm run test && npm run build && release-it && npm run deploy"
+    "release": "npm run test && npm run build && release-it && npm run deploy",
+    "prepare": "npm run build"
   },
   "dependencies": {
     "@types/mustache": "^4.2.2",
