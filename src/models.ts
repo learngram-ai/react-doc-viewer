@@ -30,6 +30,7 @@ export interface IHeaderConfig {
   disableHeader?: boolean;
   disableFileName?: boolean;
   retainURLParams?: boolean;
+  enableDownload?: boolean;
   overrideComponent?: IHeaderOverride;
 }
 

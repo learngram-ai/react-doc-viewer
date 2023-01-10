@@ -29,12 +29,13 @@ const PDFControls: FC<{}> = () => {
   } = useContext(PDFContext);
 
   const currentDocument = mainState?.currentDocument || null;
+  const renderDownloadBtn = mainState?.config?.header?.enableDownload || false;
 
   return (
     <Container id="pdf-controls">
       {paginated && numPages > 1 && <PDFPagination />}
 
-      {currentDocument?.fileData && (
+      {currentDocument?.fileData && renderDownloadBtn && (
         <DownloadButton
           id="pdf-download"
           href={currentDocument?.fileData as string}
